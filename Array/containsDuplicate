@@ -1,0 +1,10 @@
+class Solution(object):
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        nums2 = set(nums)
+        if len(nums2) < len(nums):
+            return True
+        return False
