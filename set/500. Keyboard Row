@@ -1,0 +1,24 @@
+class Solution(object):
+    def findWords(self, words):
+        """
+        :type words: List[str]
+        :rtype: List[str]
+        """
+        a = set("qwertyuiop")
+        b = set("asdfghjkl")
+        c = set("zxcvbnm")
+        
+        res = []
+        for word in words:
+            t=set(word.lower())
+            if a & t == t:
+                res.append(word)
+            if b & t == t:
+                res.append(word)
+            if c & t == t :
+                res.append(word)
+        return res
+        
+        
+tIME COMPLEXITYL:
+
