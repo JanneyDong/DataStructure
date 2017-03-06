@@ -1,0 +1,8 @@
+stack : add o(1)
+        delete O(1)
+       
+       
+queue add O(1)
+      delete O(1)
+      
+ 
