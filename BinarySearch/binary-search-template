@@ -1,0 +1,25 @@
+
+Return the first position of the target 
+
+def binary_search(array, target):
+    if target == Null and len(array)== 0 :
+        return -1
+        
+    start = 0
+    end = len(array) -1
+    while start + 1  < end:  
+        mid = start + (end - start) / 2
+        val = array[mid]
+        if target == val:
+            end = mid
+        elif val < target:
+            start = mid   
+        elif val > target:
+            end = mid
+            
+    if array[start] == target:
+        return start
+    if array[end] == target:
+        return end
+    return -1 
+    
