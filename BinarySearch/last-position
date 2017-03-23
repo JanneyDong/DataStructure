@@ -1,0 +1,23 @@
+def binary_search(A, target):
+    if target is None and len(A) == 0:
+        return -1
+
+    start = 0
+    end = len(A) - 1
+    while start <= end:
+        mid = start + (end - start) / 2
+        if A[mid] == target:
+            if mid + 1 < len(A) and A[mid+1] == target:
+                start = mid
+            else:
+                return mid
+        elif A[mid] < target:
+            start = mid
+        else:
+            end = mid
+
+    if A[end] == target:
+        return end
+    if A[start] == target:
+        return start
+    return -1
